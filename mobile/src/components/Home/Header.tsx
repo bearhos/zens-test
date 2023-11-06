@@ -3,15 +3,16 @@ import React from 'react'
 import styled from 'styled-components/native';
 
  const WelcomeContainer = () => {
+    const logo = require('../../assets/logocompany.png')
   return (
     <Container>
-    <CompanyLogo resizeMode='center' source={{uri: 'https://lh4.googleusercontent.com/kXVQo6_f2rRFS5rAyfQmP8YkV3GGAvNSqWBRIciUksq49eZjc_2--gE25PKuStg_vNM_j4JpGnSwfujse2L4le6Ixf7W3Jt_8dP8Ah5zfG-IZ7MQI2aAEuO3Woh0RviE3ius2Umis4YAfNOTNZ6LFnQ'}}></CompanyLogo>
+    <CompanyLogo resizeMode='center' source={logo}></CompanyLogo>
     <RightHeaderContainer>
     <UserContainer>
     <GreyText>Handicrafted by</GreyText>
     <UserName>Jim HLS</UserName>
     </UserContainer>
-    <UserImage resizeMode='cover' source={{uri: 'https://cdn.britannica.com/84/73184-050-05ED59CB/Sunflower-field-Fargo-North-Dakota.jpg'}}></UserImage>
+    <UserImage resizeMode='contain' source={{uri: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQb2MUQarpkWqHVcKjApJ2iKJWLRuqWUDwwm8pbBzvBufTepPv8'}}></UserImage>
     </RightHeaderContainer>
   </Container>
   )
@@ -21,13 +22,15 @@ const Container = styled.View`
     flex-direction: row;
     justify-content: space-between;
     background-color: #ffff;
-    padding: 0px 10px;
+    padding: 0px 19px;
     align-items: center;
+    margin-bottom: 10px;
 
 `
 const CompanyLogo = styled.Image`
     height: 60px;
     width: 60px;
+    margin-left: 10px;
 `;
 const RightHeaderContainer = styled.View`
     flex-direction: row;
