@@ -4,14 +4,14 @@ import styled from 'styled-components/native';
 const WelcomeContainer = () => {
   return (
     <Container>
-      <Text size={22} weight={700}>A joke a day keeps the doctor away</Text>
-      <Text size={18} weight={500}>If you joke wrong way, your teeth have to pay. (Serious)</Text>
+      <Text size={22} weight={600}>A joke a day keeps the doctor away</Text>
+      <Text size={14} weight={600}>If you joke wrong way, your teeth have to pay. (Serious)</Text>
     </Container>
   );
 };
 const Container = styled.View`
   background-color: #2fb363;
-  height: 200px;
+  height: 160px;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ const Container = styled.View`
 const Text = styled.Text<{size: number,weight: number}>`
   color: #ffff;
   text-align: center;
-  padding : 10px 0px;
+  padding : 15px 0px;
   font-weight: ${props=> props.weight};
   font-size: ${props => props.size}px;
 `;

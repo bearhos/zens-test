@@ -51,7 +51,7 @@ const HomeScreen = () => {
           </Button>
           <Button onPress={()=>joke !== null ?onPressButton(false): {}} backgroundColor={'#2FB363'}>
             <ButtonText >
-              This is not Funny!
+              This is not funny.
             </ButtonText>
           </Button>
         </ButtonContainer>
@@ -64,6 +64,9 @@ const HomeScreen = () => {
           accurary of any particular statement and accpets no liability for any
           loss or damage which arise from reliance on the infomation
         </CoppyRightText>
+        <CoppyRightTextCompany>
+          Copyright 2021 HLS
+        </CoppyRightTextCompany>
       </CoppyRight>
     </Container>
   );
@@ -72,30 +75,34 @@ const Container = styled.SafeAreaView`
   flex: 1;
 `;
 const ContentContainer = styled.View`
-  padding: 20px 10px;
-  justify-content: space-around;
+  padding: 20px 20px;
+  justify-content: space-between;
   flex: 1;
 `;
 const ContentText = styled.Text`
-
-  font-size: 18px;
-  line-height: 25px;
+  color: #4b4b4b;
+  font-size: 16px;
+  margin-top : 40px;
+  line-height: 22px;
+  text-align: left ;
 `;
 const ButtonContainer = styled.View`
-
+  margin-bottom: 25px;
   flex-direction: row;
   justify-content: space-around;
 `;
 const Button = styled.TouchableOpacity<{backgroundColor: string}>`
-  height: 50px;
+  height: 40px;
+  width: 150px;
   justify-content: center;
   align-items: center;
+  
   padding: 0px 7px;
   background-color: ${props => props.backgroundColor};
 `;
 const ButtonText = styled.Text`
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
 `;
 const CoppyRight = styled.View`
@@ -104,12 +111,19 @@ const CoppyRight = styled.View`
   border-color: #e1dfdf;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0px 10px;
 `;
 const CoppyRightText = styled.Text`
   color: #909090;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
+  text-align: center;
+`;
+const CoppyRightTextCompany = styled.Text`
+  color: #4b4b4b;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: 400;
   text-align: center;
 `;
 export default HomeScreen;
